@@ -1,4 +1,4 @@
-package lambda;
+package model;
 
 public class Apple {
 
@@ -6,9 +6,12 @@ public class Apple {
 
 	private int price;
 
-	public Apple(int weight, int price) {
+	private String color;
+
+	public Apple(int weight, int price, String color) {
 		this.weight = weight;
 		this.price = price;
+		this.color = color;
 	}
 
 	public Integer getWeight() {
@@ -27,8 +30,20 @@ public class Apple {
 		this.price = price;
 	}
 
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
 	@Override
 	public String toString() {
-		return "Apple [weight=" + weight + ", price=" + price + "]";
+		return "Apple{" +
+				"weight=" + weight +
+				", price=" + price +
+				", color='" + color + '\'' +
+				'}';
 	}
 }

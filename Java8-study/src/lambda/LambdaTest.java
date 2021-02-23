@@ -1,5 +1,7 @@
 package lambda;
 
+import model.Apple;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,18 +19,18 @@ public class LambdaTest {
 			}
 		};
 		
-		/* lambda함수를 사용한 방식 */
+		/** lambda함수를 사용한 방식 */
 		Comparator<Apple> sortByWeightAndLambda =  
 				(Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight());
 		
 		
 		ArrayList<Apple> appleList = new ArrayList<>();
 		
-		appleList.add(new Apple(200, 1500));
-		appleList.add(new Apple(210, 3200));
-		appleList.add(new Apple(280, 4300));
-		appleList.add(new Apple(230, 2500));
-		appleList.add(new Apple(190, 2200));
+		appleList.add(new Apple(200, 1500, "brown"));
+		appleList.add(new Apple(210, 3200, "green"));
+		appleList.add(new Apple(280, 4300, "red"));
+		appleList.add(new Apple(230, 2500, "red"));
+		appleList.add(new Apple(190, 2200, "green"));
 		
 		Collections.sort(appleList, sortByWeightAndLambda);
 		
